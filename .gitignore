@@ -3,6 +3,11 @@
 ##
 ## Get latest from https://github.com/github/gitignore/blob/master/VisualStudio.gitignore
 
+#Force inlcude
+!*/lib/*
+!lib/release
+!lib/debug
+
 # User-specific files
 *.suo
 *.user
@@ -65,7 +70,7 @@ StyleCopReport.xml
 *.meta
 #*.obj
 *.iobj
-*.pch
+#*.pch
 #*.pdb
 *.ipdb
 *.pgc
