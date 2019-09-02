@@ -3,10 +3,7 @@
 ##
 ## Get latest from https://github.com/github/gitignore/blob/master/VisualStudio.gitignore
 
-#Force inlcude
-!*/lib/*
-!lib/release
-!lib/debug
+
 
 # User-specific files
 *.suo
@@ -28,6 +25,11 @@ bld/
 [Bb]in/
 [Oo]bj/
 [Ll]og/
+
+#Force inlcude
+#!*/lib/*
+!*/lib/[Rr]elease
+!*/lib/[Dd]ebug
 
 # Visual Studio 2015/2017 cache/options directory
 .vs/
