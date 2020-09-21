@@ -36,7 +36,7 @@ void TriangleMesh::initBuffers(ID3D11Device* device)
 	indices = new unsigned long[indexCount];
 
 	// Load the vertex array with data.
-	vertices[0].position = XMFLOAT3(0.0f, 1.0f, 0.0f);  // Top.
+	vertices[0].position = XMFLOAT3(-1.0f, 1.0f, 0.0f);  // Top.
 	vertices[0].texture = XMFLOAT2(0.5f, 0.0f);
 	vertices[0].normal = XMFLOAT3(0.0f, 0.0f, -1.0f);
 
@@ -48,10 +48,18 @@ void TriangleMesh::initBuffers(ID3D11Device* device)
 	vertices[2].texture = XMFLOAT2(1.0f, 1.0f);
 	vertices[2].normal = XMFLOAT3(0.0f, 0.0f, -1.0f);
 
+	////Need to make second triangle instead of just another point
+	//vertices[3].position = XMFLOAT3(1.0f, 1.0f, 0.0f);  // Top right.
+	//vertices[3].texture = XMFLOAT2(0.5f, 0.0f);
+	//vertices[3].normal = XMFLOAT3(0.0f, 0.0f, -1.0f);
+
 	// Load the index array with data.
 	indices[0] = 0;  // Top/
 	indices[1] = 1;  // Bottom left.
 	indices[2] = 2;  // Bottom right.
+	/*indices[3] = 0;
+	indices[4] = 2;
+	indices[5] = 3;*/
 
 	vertexBufferDesc = { sizeof(VertexType) * vertexCount, D3D11_USAGE_DEFAULT, D3D11_BIND_VERTEX_BUFFER, 0, 0, 0 };
 	vertexData = {vertices, 0 , 0};
